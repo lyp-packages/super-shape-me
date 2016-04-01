@@ -46,7 +46,6 @@ lyp install super-shape-me
 % maintained. That way a slur can be rotated, elongated or skewed.
 % A coordinate can be either a scheme pair, a number signifying vertical 
 % position, or #f for a zero coordinate.
-
 \sNudge 2 0 c( d)
 
 % \sS - set slur shape by specifying all four control points. 
