@@ -47,10 +47,7 @@ sP = #(define-music-function (parser location p1 p2) (number? number?)
   #{ \once \override Slur.positions = #(cons p1 p2) #})
 
 sS = #(define-music-function (parser location s) (scheme?)
-  #{ 
-  #(display (ssm:convert-coord-list s))
-  #(newline)
-\shape #(ssm:convert-coord-list s) Slur #})
+  #{ \shape #(ssm:convert-coord-list s) Slur #})
 
 sNudge = #(define-music-function (parser location ca cb) (scheme? scheme?)
   #{ 

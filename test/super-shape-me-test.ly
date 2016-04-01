@@ -3,6 +3,18 @@
 \require "assert"
 \pinclude "../lib/super-shape-me.ly"
 
+#(set-default-paper-size "a4" 'landscape) 
+\paper {
+  ragged-right = ##t
+  ragged-bottom = ##t
+  indent = 0
+  
+  system-system-spacing.padding = 6
+  
+  top-margin = 5
+  bottom-margin = 5
+}
+
 #(assert:equal? (ssm:convert-coord '(0 . 0)) '(0 . 0))
 #(assert:equal? (ssm:convert-coord '(1 . 2)) '(1 . 2))
 #(assert:equal? (ssm:convert-coord #f) '(0 . 0))
@@ -41,17 +53,6 @@
   tagline = ##f
 }
 
-\paper {
-  ragged-right = ##t
-  ragged-bottom = ##t
-  indent = 0
-  
-  system-system-spacing.padding = 6
-  
-  top-margin = 5
-  bottom-margin = 5
-}
-
 space = {
   \stopStaff s1*2
   \startStaff
@@ -64,19 +65,19 @@ space = {
   c'4( f,2 e'4)
   \sR 0.7 c4(^"\\sR 0.7 (ratio)" f,2 e'4)  \space
   
-  c4( f, a8 f' e4) \sE 1.5 c4(^"\\sE 1.5" f, a8 f' e4) \break
+  c4( f, a8 f' e4) \sE 1.5 c4(^"\\sE 1.5" f, a8 f' e4) \space
 
   c4( g a b c e g e4) \sH 5 c4(^"\\sH 5" g a b c e g e4) \break
 
-  c4( g a b c e g e4) \sHE 5 2 c4(^"\\sHE 5 2" g a b c e g e4) \break
+  c4( g a b c e g e4) \sHE 5 2 c4(^"\\sHE 5 2" g a b c e g e4) \space
 
-  c4( g a b c e g e4) \sHE 4 3 c4(^"\\sHE 4 3" g a b c e g e4) \break
+  c4( g a b c e g e4) \sHE 4 3 c4(^"\\sHE 4 3" g a b c e g e4) \space
 
   c4( g'2 e4) \sHR 3 0.7 c4(^"\\sHR 3 0.7" g'2 e4) \break
 
   a,2( e'2) \sP 2.5 2.5 a,2(^"\\sP 2.3 2.5" e'2) \space
   
-  a,2( e'2) \sNudge 2 0 a,2(^"\\sNudge 2 0" e'2) \break
+  a,2( e'2) \sNudge 2 0 a,2(^"\\sNudge 2 0" e'2) \space
   
   a,2( d'8 e g,4)
     \sS #'(-1 0 (1 . 1) #f) a,2(^"\\sS #'(-1 0 (1 . 1) #f)" d'8 e g,4) 

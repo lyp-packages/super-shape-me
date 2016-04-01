@@ -7,8 +7,10 @@ A package for tweaking lilypond slurs &amp; ties
 This package provides helper commands for tweaking slurs and ties with minimum fuss.
 
 <p align="center">
+  <a href="https://github.com/noteflakes/lyp-super-shape-me/blob/master/super-shape-me-test.png">
   <img
-   style="width: 50%" src="https://raw.githubusercontent.com/noteflakes/lyp-super-shape-me/master/super-shape-me-test.png">
+    src="https://raw.githubusercontent.com/noteflakes/lyp-super-shape-me/master/super-shape-me-test.png">
+  </a>
 </p>
 
 ## Installation
