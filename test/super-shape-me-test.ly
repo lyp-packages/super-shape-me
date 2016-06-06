@@ -1,7 +1,7 @@
 \version "2.19.37"
 
 \require "assert"
-\pinclude "../lib/super-shape-me.ly"
+\pinclude "../package.ly"
 
 #(set-default-paper-size "a4" 'landscape) 
 \paper {
@@ -63,24 +63,24 @@ space = {
   \override TextScript.font-size = -2
   
   c'4( f,2 e'4)
-  \sR 0.7 c4(^"\\sR 0.7 (ratio)" f,2 e'4)  \space
+  \sr 0.7 c4(^"\\sr 0.7 (ratio)" f,2 e'4)  \space
   
-  c4( f, a8 f' e4) \sE 1.5 c4(^"\\sE 1.5" f, a8 f' e4) \space
+  c4( f, a8 f' e4) \se 1.5 c4(^"\\se 1.5" f, a8 f' e4) \space
 
-  c4( g a b c e g e4) \sH 5 c4(^"\\sH 5" g a b c e g e4) \break
+  c4( g a b c e g e4) \sh 5 c4(^"\\sh 5" g a b c e g e4) \break
 
-  c4( g a b c e g e4) \sHE 5 2 c4(^"\\sHE 5 2" g a b c e g e4) \space
+  c4( g a b c e g e4) \she 5 2 c4(^"\\she 5 2" g a b c e g e4) \space
 
-  c4( g a b c e g e4) \sHE 4 3 c4(^"\\sHE 4 3" g a b c e g e4) \space
+  c4( g a b c e g e4) \she 4 3 c4(^"\\she 4 3" g a b c e g e4) \space
 
-  c4( g'2 e4) \sHR 3 0.7 c4(^"\\sHR 3 0.7" g'2 e4) \break
+  c4( g'2 e4) \shr 3 0.7 c4(^"\\shr 3 0.7" g'2 e4) \break
 
-  a,2( e'2) \sP 2.5 2.5 a,2(^"\\sP 2.3 2.5" e'2) \space
+  a,2( e'2) \sp 2.5 2.5 a,2(^"\\sp 2.3 2.5" e'2) \space
   
-  a,2( e'2) \sNudge 2 0 a,2(^"\\sNudge 2 0" e'2) \space
+  a,2( e'2) \snudge 2 0 a,2(^"\\snudge 2 0" e'2) \space
   
   a,2( d'8 e g,4)
-    \sS #'(-1 0 (1 . 1) #f) a,2(^"\\sS #'(-1 0 (1 . 1) #f)" d'8 e g,4) 
+    \ss #'(-1 0 (1 . 1) #f) a,2(^"\\ss #'(-1 0 (1 . 1) #f)" d'8 e g,4) 
     
   \stopStaff
   s1*2
